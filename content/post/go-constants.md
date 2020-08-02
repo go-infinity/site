@@ -14,4 +14,31 @@ Types are of 2 type :
 - User define
 
 ## Constants Declaration
-const = abc
+const varname = value                             
+const pi = 3.14
+
+- In-build constants
+```mermaid
+Using math package:
+fmt.Println(math.Pi)
+Output:
+3.141592653589793
+```
+
+- User Define constants
+
+```mermaid
+- Int type:
+const num = 10
+
+- Complex type
+const comp = 987.654E-29
+
+- Float type
+const f = 3.14159
+
+- Boolean type
+const result = false
+```
+
+
