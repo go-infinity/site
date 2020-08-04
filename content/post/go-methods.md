@@ -8,7 +8,13 @@ categories: [Golang]
 ---
 
 ## Whats are Methods
-Methods provide behaviour to our types. It provides Object Oriented Programming Model in Golang
+Methods provide behaviour to our types. It provides Object Oriented Programming Model in Golang. They are similar to functions with one difference i.e, the method contains a receiver argument in it. Receiver argument help in accessing receiver properties. 
+```go
+//Syntax
+func(receiver_name Type) method_name(parameter_list)(return_type){
+// Code
+}
+```
 
 ## Golang Specification
 ```ebnf
@@ -42,4 +48,18 @@ func(b *Book) UpdateTitle(newTitle string) bool {
 ```
 ## Value to Pointer Receiver Conversion
 
+
 ## Value Reciever vs Pointer Receiver
+
+## Methods with same name
+We can have methods with same name but different receiver.
+```go
+//syntax
+func(reciver_name_1 Type) method_name(parameter_list)(return_type){
+// Code
+}
+
+func(reciver_name_2 Type) method_name(parameter_list)(return_type){
+// Code
+}
+```
