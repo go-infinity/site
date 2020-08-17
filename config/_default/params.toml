@@ -218,7 +218,7 @@ plugins_js  = []
 
   # Configuration of Disqus.
   [comments.disqus]
-    shortname = "goworks.netlify.app"  # Paste the shortname from your Disqus dashboard.
+    shortname = "goworks-netlify-app"  # Paste the shortname from your Disqus dashboard.
     show_count = true  # Show comment count in page header? (true/false)
 
   # Configuration of Commento.
