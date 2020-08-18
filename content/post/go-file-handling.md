@@ -12,6 +12,16 @@ Files on a basic level are of two types
 - Non Binary e.g. txt, csv, json
 
 > Golang provides full support for non binary files manipulation and have limited support for Binary files.
+
+## File Permissions
+POSIX standard has 2 set of information related to file permissions
+- file permissions
+- file owner/group
+
+### File Permission
+- contains 10 bits to represent file/directory and permissions(read,write,execute) for owner,group and others in the below format
+- file/dir-permission for owner-permission for group-permission for others
+
 ## File Stats
 ```go
 package main
@@ -77,6 +87,59 @@ func main() {
 {{< goplay url=cb6B6zX7iL0 >}}
 ```
 
-## Read File
+## Read File in Chunks
+```go
+package main
+
+import (
+	"fmt"
+	"io"
+	"os"
+)
+
+func main() {
+	f, err := os.Open("Test.txt")
+	defer f.Close()
+	if err != nil {
+		fmt.Printf(err.Error())
+		os.Exit(1)
+	}
+
+	b := make([]byte, 5)
+
+	for {
+		n, err := f.Read(b)
+		if err != nil {
+			if err != io.EOF {
+				fmt.Println(err)
+			}
+			break
+		}
+		fmt.Print(string(b[:n]))
+	}
+
+}
+
+```
+## Read File using FileMode
+## Read File using Stat
+## Read File using ioutil
+```go
+package main
+
+import (
+	"fmt"
+	"io/ioutil"
+)
+
+func main() {
+	data, err := ioutil.ReadFile("Test.txt")
+	if err != nil {
+		fmt.Println(err)
+	}
+	fmt.Println(string(data))
+
+}
+```
 ## Rename File
 ## Remove File 
