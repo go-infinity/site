@@ -16,8 +16,8 @@ height = ""
 # Slides.
 # Duplicate an `[[item]]` block to add more slides.
 [[item]]
-  title = "Hello"
-  content = "Some Description Here"
+  title = "Golang"
+  content = "Bits and Bytes"
   align = "center"  # Choose `center`, `left`, or `right`.
 
   # Overlay a color or image (optional).
@@ -31,21 +31,21 @@ height = ""
   #   Deactivate by commenting out parameters, prefixing lines with `#`.
 
 
-[[item]]
-  title = "Left"
-  content = "I am left aligned :smile:"
-  align = "left"
+#[[item]]
+#  title = "Cloud Native"
+#  content = "Cloud9 :smile:"
+#  align = "left"
+#
+#  overlay_color = "#555"  # An HTML color value.
+#  overlay_img = ""  # Image path relative to your `static/img/` folder.
+#  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 
-  overlay_color = "#555"  # An HTML color value.
-  overlay_img = ""  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+#[[item]]
+#  title = "Devops"
+#  content = "Lets  :smile:"
+#  align = "right"
 
-[[item]]
-  title = "Right"
-  content = "I am right aligned :smile:"
-  align = "right"
-
-  overlay_color = "#333"  # An HTML color value.
-  overlay_img = ""  # Image path relative to your `static/img/` folder.
-  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
+#  overlay_color = "#333"  # An HTML color value.
+#  overlay_img = ""  # Image path relative to your `static/img/` folder.
+#  overlay_filter = 0.5  # Darken the image. Value in range 0-1.
 +++
