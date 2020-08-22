@@ -1,5 +1,5 @@
 ---
-title: "Go JSON Handling"
+title: "Go JSON Unmarshal"
 date: 2020-08-20T14:44:26+05:30
 tags: [go, json]
 draft: false
