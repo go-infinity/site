@@ -6,36 +6,9 @@ draft: false
 toc: true
 categories: [go]
 ---
-## Type of JSON
-- **Structured JSON**: When the json schema is fixed. e.g. hitting an API will always produce reponse of below structure
-```json
-{
-"id": "1",
-"employee_name": "Tiger Nixon",
-"employee_salary": "320800",
-"employee_age": "61"
-}
-```
-- **Unstructured JSON**: when the json schema is not fixed. e.g. API response can vary
-```json
-{
-"id": "1",
-"employee_name": "Tiger Nixon",
-"employee_salary": "320800",
-"employee_age": "61"
-}
-```
-or
-```json
-{
-"id": "2",
-"employee_name": {"first_name":"ABC","last_name":"XYZ"},
-"employee_salary": "320800",
-"employee_age": "61"
-}
-```
 
 ## Unmarsalling structured json data
+
 ```go
 package main
 
