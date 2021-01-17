@@ -2,7 +2,7 @@
 title: "HTTP Methods"
 date: 2020-08-22T14:44:26+05:30
 tags: [http, rest]
-draft: false
+draft: true
 toc: true
 categories: [api,http]
 ---
