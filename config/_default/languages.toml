@@ -1,20 +1,12 @@
-# Languages
-#   Create a `[X]` block for each language you want, where X is the language ID.
-#   Refer to https://sourcethemes.com/academic/docs/language/
-
-# Configure the English version of the site.
 [en]
-  languageCode = "en-us"
-  # contentDir = "content/en"  # Uncomment for multi-lingual sites, and move English content into `en` sub-folder.
+  languageCode = "en"
+  languageName = "English"
+  # Uncomment for multilingual sites, and move the default content into corresponding sub-folder.
+  # contentDir = "content/en"
 
-# Uncomment the lines below to configure your website in a second language.
-#[zh]
-#  languageCode = "zh-Hans"
-#  contentDir = "content/zh"
-#  title = "Chinese website title..."
-#  [zh.params]
-#    description = "Site description in Chinese..."
-#  [[zh.menu.main]]
-#    name = "Wo"
-#    url = "#about"
-#    weight = 1
+# Uncomment for multilingual sites, and customize the following config.
+# [zh]
+#   languageCode = "zh"
+#   languageName = "简体中文"
+#   contentDir = "content/zh"
+#   title = "中文标题"
