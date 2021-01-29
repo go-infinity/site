@@ -16,3 +16,14 @@ positive impact on the lives of those around me.
 - Experienced in building backends using microservices architecture with exposure to technologies like Golang and Java/Spring.
 - Experienced in Infrastructure automation for deploying automation using tools like terraform/ansible on VM or kubernetes using
 containers.
+
+### Interests
+My interests are broad ranging lying in the area of Software Development, DevOps and Cloud.
+<p>
+<a><span class="tag title is-6 is-light">Golang</span></a>
+<a><span class="tag title is-6 is-light">Docker</span></a>
+<a><span class="tag title is-6 is-light">Kubernetes</span></a>
+<a><span class="tag title is-6 is-light">Microservices</span></a>
+<a><span class="tag title is-6 is-light">GRPC</span></a>
+<a><span class="tag title is-6 is-light">REST</span></a>
+</p>
