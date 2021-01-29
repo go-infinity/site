@@ -2,6 +2,7 @@ baseURL: https://goworks.netlify.app
 languageCode: en-us
 title: Personal website and blog
 theme: hugo-refresh
+enableemoji: true
 # theme: ../..
 
 disqusShortname: goworks-netlify-app
