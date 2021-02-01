@@ -1,6 +1,6 @@
 ---
 title: "Concurrency Patterns - Channels"
-date: 2021-01-22T21:51:13+01:00
+date: 2021-01-31T21:51:13+01:00
 draft: false
 hideLastModified: true
 summaryImage: "concurrency-channel.jpg" 
@@ -8,6 +8,8 @@ keepImageRatio: true
 tags: ["go", "concurrency"]
 summary: "Various Go Concurrency Patterns"
 ---
+> This series will walk through the benefits of writing concurrent programs and the issues along the way. This series assumes basic understanding of Golang concurrency primitives like `mutexes`,`goroutines`,`channels` etc.
+
 This is 2nd post in the Go Concurrency series.
 1. [Concurrency Patterns - Locks and Waitgroups](/posts/go-concurrency/locks/)
 2. Concurrency Patterns - Channels
