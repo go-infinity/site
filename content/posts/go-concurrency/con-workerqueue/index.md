@@ -60,6 +60,7 @@ func ScrapeURL(jobs chan string, ch chan int) {
 		if err != nil {
 			log.Fatal(err)
 		}
+		defer resp.Body.Close()
 		ch <- res.StatusCode
 	}
 }

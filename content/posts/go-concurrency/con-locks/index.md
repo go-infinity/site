@@ -58,10 +58,12 @@ func ScrapeURL(url string) (int, error) {
 	if err != nil {
 		return 0, err
 	}
+	defer resp.Body.Close()
 	return res.StatusCode, nil
 }
+{{< goplay url=abcde >}}
 {{< /codeWide >}}
-
+{{< goplay url=abcde >}}
 Let's run the above code with some arguments and also use linux `time` command to benchmark it in the naive way. We found that the total execution time is around 4-5 seconds. Please note that we are directly using run command and not building the executable first.
 
 {{< codeWide language="shell" >}}
@@ -108,6 +110,7 @@ func ScrapeURL(url string, wg *sync.WaitGroup) {
 	if err != nil {
 		log.Fatal()
 	}
+	defer resp.Body.Close()
     resp = append(resp, res.StatusCode)
 	wg.Done() //decrease the waitfroup counter
 }
@@ -165,6 +168,7 @@ func ScrapeURL(url string, wg *sync.WaitGroup) {
 	if err != nil {
 		log.Fatal()
 	}
+	defer resp.Body.Close()
 	UpdateResp(res.StatusCode)
 	wg.Done()
 }

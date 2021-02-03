@@ -59,6 +59,7 @@ func ScrapeURL(url string, done chan int) {
 	if err != nil {
 		log.Fatal()
 	}
+	defer resp.Body.Close()
 	done <- res.StatusCode
 }
 {{< /codeWide >}}
