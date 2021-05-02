@@ -1,7 +1,7 @@
 ---
 title: "IAM Concepts - OAuth2 and OIDC"
 date: 2021-02-09T21:51:13+01:00
-draft: false
+draft: true
 hideLastModified: true
 summaryImage: "iam.png" 
 keepImageRatio: true
