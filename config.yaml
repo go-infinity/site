@@ -113,7 +113,7 @@ params:
     # option to specify the subtitle in the homepage
     subtitle: Personal website and blog
     # option to specify image in the homepage
-    image: "/images/profile.jpg" # worker.svg 
+    image: "/images/Avatar.png" # worker.svg 
     # option to specify the width of the image in the homepage
     imageWidth: 500px
 

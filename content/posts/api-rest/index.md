@@ -18,7 +18,7 @@ HTTP is the defacto standard to access application/services these days, Hence al
 ### Client Server Model
 Now the http services can be consumed by http clients over APIs
 
-{{<mermaid>}}
+{{< mermaid align="center" theme="neutral" >}}
 graph LR;
    client-->Network;
    Network-->Server;

@@ -5,12 +5,13 @@ tags: [git, basics]
 draft: true
 toc: true
 categories: [Git]
+mermaid: true
 ---
 
 ## What is Git
 Git is a distributed version control system required in managing source code in big teams. It also helps to deliver the software to wider community.
 
-```mermaid
+{{< mermaid align="left" theme="neutral" >}}
 sequenceDiagram
   participant A_Repo
   participant Github
@@ -19,7 +20,7 @@ sequenceDiagram
   Note right of A_Repo: local development cycle
   Github->>B_Repo: clone/pull master
   Note right of B_Repo: local development cycle
-```
+{{< /mermaid >}}
 
 ## Git Initilization
 we can either use one of the following
