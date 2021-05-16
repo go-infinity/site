@@ -9,7 +9,7 @@ tags: ["go", "resiliency","timeouts"]
 summary: "Various Resiliency Patterns"
 ---
 
-We, API developers always try to build robust `HTTP` servers and clients. But there is a network involved between in between, and we cannot be very sure of the network reliability. We might not face these issues for a long long time until one day. Recently I faced such an issue that inspired me to write this post. The idea here is that there can be too many factors, abstractions, and integrations on which our `HTTP` Backends are based on and we should be designing our software to tolerate all such failures. You might have guessed it already where I am going with this. Yes we are going to look at various resiliency patterns. 
+We, API developers always try to build robust `HTTP` servers and clients. But there is a network involved in between, and we cannot be very sure of the network reliability. We might not face these issues for a very long time until one day. Recently I faced such an issue that inspired me to write this post. The idea here is that there can be too many factors, abstractions, and integrations on which our `HTTP` Backends are based on and we should be designing our software to tolerate all such failures. You might have guessed it already where I am going with this. Yes we are going to look at various resiliency patterns. 
 
 > Resiliency patterns helps to prevent cascading failures and to preserve functionality in the event of service failure.
 
