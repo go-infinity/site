@@ -4,7 +4,7 @@ title: Personal website and blog
 theme: hugo-refresh
 enableemoji: true
 # theme: ../..
-
+googleAnalytics: G-273319618
 disqusShortname: goworks-netlify-app
 
 #########################################
