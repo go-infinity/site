@@ -13,7 +13,9 @@ summary: "Various Go Concurrency Patterns"
 This is 1st post in the Go Concurrency series. We will focus on locking and syncronization in Golang. We will use a practical problem to demonstrate various concurrency patterns.
 
 1. Concurrency Patterns - Locks and Waitgroups
+
 2. [Concurrency Patterns - Channels](/posts/go-concurrency/con-channels/)
+
 3. [Concurrency Patterns - WorkerQueue](/posts/go-concurrency/con-workerqueue/)
 
 We all know Concurrency in `Go` is easy to start with, but hard to master. We have to be very careful while implementaing it and make sure that there are no race conditions, deadloacks, syncronization between goroutines etc.
