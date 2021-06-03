@@ -42,7 +42,8 @@ Being in userspace and managed by `Go` runtime/scheduler, Goroutines require les
 ### Show me the code
 Let's keep the tradition going and start with a **helloworld** example of go concurrency below. You will see there is a single keyword called `go` to create concurrent threads of execution. 
 
-{{< codeWide language="go" >}}package main
+```go
+package main
 import (
 	"fmt"
 	"time"
@@ -54,7 +55,7 @@ func main() {
 	go hello() //create a goroutine
 	time.Sleep(time.Second * 1) //stupid man synchronization
 }
-{{< /codeWide >}}
+```
 
 Lets first try to understand the above code. At line 6, we have defined a function named `hello` which prints "Hello World" on the STDOUT. In line 11, we have called this function with `go` keyword which will start this as goroutine.
 Copy the above code and try to run it in your editor with/without `time.Sleep`. You will observe that without `time.sleep` main gorotuines exits without waiting for hello goroutine to finish. This is the way how it's implemented in `Go` where the main goroutine doesn't wait for other goroutines to finish. This is called as Fork Join Model and requires some kind of Join condition in the end to wait for all goroutines to finish. This requires some synchornization among goroutine through channels,waitgroups etc. `time.Sleep` is just a naive way to increase the probability that hello goroutine will finish its execution during that time.
@@ -63,7 +64,7 @@ Okay, we have got our hands dirty in the concurrency mud, just kidding:smile:. W
 
 In the above code, We have a seperate `hello` function which we are executing concurrently using the go keyword. Its not manadatory to create a seperate function and we can use anonymous function to achieve the same result as below.
 
-{{< codeWide language="go" >}}
+```go
 package main
 import (
 	"fmt"
@@ -75,12 +76,12 @@ func main() {
 	}()
 	time.Sleep(time.Second * 1) //stupid man synchronization
 }
-{{< /codeWide >}}
+```
 
 ### Concurrent Merge Sort
 Okay, Now we know the basics of writing concurrent program in `Go` let's try to solve an actual problem. We all have used/learnt Merge Sort during our work/college. Below is the non-concurrent version.
 
-{{< codeWide language="go" >}}
+```go
 // MergeSort sorts the slice s using Merge Sort Algorithm
 func MergeSort(s []int) []int {
 	if len(s) <= 1 {
@@ -113,13 +114,13 @@ func merge(l, r []int) []int {
 	}
 	return ret
 }
-{{< /codeWide >}}
+```
 
 And below we see the that we only have main goroutine running on one of the processor
 {{< figure src="maingoroutine.png" height="400" >}}
 
 The same code using concurrency with two goroutines.
-{{< codeWide language="go" >}}
+```go
 // MergeSortMulti sorts the slice s using Merge Sort Algorithm
 func MergeSortMulti(s []int) []int {
 	fmt.Println(runtime.NumCPU())
@@ -162,7 +163,7 @@ func merge(l, r []int) []int {
 	}
 	return ret
 }
-{{< /codeWide >}}
+```
 
 We see that now the we have goroutines running concurrently on both the processor.
 {{< figure src="multigoroutine.png" height="400" >}}

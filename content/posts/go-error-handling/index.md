@@ -34,15 +34,15 @@ If err != ni {
 
 ## Error Interface
 Error interface is defined inside go standard library 
-{{< codeWide language="go" >}}
+```go
 type error interface {
 	Error() string
 }
-{{< /codeWide >}}
+```
 
 ## Returning Errors
 There are two ways to return errors
-{{< codeWide language="go" >}}
+```go
 fmt.Errorf("Error Message")
 errors.New("Error Message")
 ```

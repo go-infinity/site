@@ -10,11 +10,11 @@ categories: [Golang]
 Go Maps enables us to store key values pair where key can be anything that can be checked for equality. That means apart from maps, slices, funcs
 
 ## Why use maps instead of array/slices
-{{< codeWide language="go" >}}
+```go
 mapCapitals := map[string]string{"India":"Delhi","Pakistan":"Islamabad"}
 mapCapitals["India"]
 ```
-{{< codeWide language="go" >}}
+```go
 type struct Capitals {
     County string
     Capital string
@@ -26,38 +26,38 @@ for i, v := range arrayCapitals {
         v.Capital
     }
 }
-{{< /codeWide >}}
+```
  Timecomplexity of seach operation on map is constant time O(1).
 
 ## Map Operations
 - Initialize
-{{< codeWide language="go" >}}
+```go
 1) mapVariable := map[KeyDataType]ValueDataType{EntryKeyPair} 
 ex. mapCapitals := map[string]string{"India":"Delhi","Pakistan":"Islamabad"}
 2) mapVariable = make(map[KeyDataType]ValueDataType)
 ```
 - Set
-{{< codeWide language="go" >}}
+```go
 mapVariable[Key] = value
 ex. mapCapitals["France"] = "Paris"
 ```
 - Get
-{{< codeWide language="go" >}}
+```go
 value = mapVariable[key]
 ex. capitalIndia := mapCapital["India"]
 ```
 - Delete
-{{< codeWide language="go" >}}
+```go
 delete(mapVariable,key)
 ex. delete(mapCapitals,"France")
 ```
 - Iterate
-{{< codeWide language="go" >}}
+```go
 for k,v := range mapCapitals{
     fmt.Printf("%s has capital %s",k,v)
 }
-{{< /codeWide >}}
+```
 - Length
-{{< codeWide language="go" >}}
+```go
 len(mapCapitals)
 ```

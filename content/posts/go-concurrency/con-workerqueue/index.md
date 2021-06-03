@@ -18,7 +18,7 @@ This is 3rd post in the Go Concurrency series.
 Next in our series on Golang Concurrency patterns is {{< codeInline >}} WorkerQueue {{< /codeInline>}}  or {{< codeInline>}} JobQueue {{< /codeInline >}}. In this pattern we want to restrict number of parallel threads/goroutines that will work at a time. In other words we can also say that we want to keep a pool of goroutines. This pattern is particularly useful when we dont knew the number of jobs/requests that we will recieve and we want some upper threashold on the number of goroutines so that our infra/server dont get overloaded. Hence we need some mechanism to keep all the jobs and assign this job to a free goroutine/worker.
 We will continue with the same example we started with and we will restrict the number of goutines to 2.
 
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -64,4 +64,4 @@ func ScrapeURL(jobs chan string, ch chan int) {
 		ch <- res.StatusCode
 	}
 }
-{{< /codeWide >}}
+```

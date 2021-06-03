@@ -26,7 +26,7 @@ A Channel is way for 2 or more goroutines to pass data to each other. It can be 
 
 Go provides typesafe channels which can be created using `chan` keyword. Go Provides both buffered and unbuffered channels. Also its possible to specify direction of channels means whether we can only send or recieve or do both. Channel will be covered in detail in another post. We will start with basic implementation and then will try to improve on the same.
 
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -62,7 +62,7 @@ func ScrapeURL(url string, done chan int) {
 	defer resp.Body.Close()
 	done <- res.StatusCode
 }
-{{< /codeWide >}}
+```
 
 Performance of the above code is similar to our solution using `sync.Mutex`. So we have not improved much on performance but there are other advantages to this pattern highlighted in the next section.
 {{< codeWide language="shell" >}}
@@ -72,7 +72,7 @@ Responses :[200 200 200 200]
 real    0m2.000s
 user    0m0.733s
 sys     0m0.238s
-{{< /codeWide >}}
+```
 
 But you might have already observed that we get rid of `waitgroups` which already is big improvement and make our code simpler to understand. Some of you who have come from other programming languages backgorund migh have hard time to wrap your head around this concept as it was the case with me. You might have already start wondering how come we don't have race conditions in this solutions and how different goroutines are coordinating. Its this property of `go` channels which makes them special as highlighted below.
 

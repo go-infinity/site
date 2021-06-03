@@ -78,15 +78,6 @@
   <script src="{{- $js10.Permalink | relURL -}}"></script>
 {{- end -}}
 
-<script>
-  hljs.initHighlightingOnLoad();
-  hljs.initLineNumbersOnLoad();
-  document.addEventListener('DOMContentLoaded', (event) => {
-    document.querySelectorAll('.codeinline').forEach((block) => {
-      hljs.highlightBlock(block);
-    });
-  });
-</script>
 
 {{/*  <script type="text/x-mathjax-config">
   MathJax.Hub.Config({

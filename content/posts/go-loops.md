@@ -18,7 +18,7 @@ ForStmt = "for" [ Condition | ForClause | RangeClause ] Block .
 Condition = Expression .
 ```
 ## Loop using condition
-{{< codeWide language="go" >}}
+```go
 package main
 
 import "fmt"
@@ -32,10 +32,10 @@ func main() {
 		a = a + 1
 	}
 }
-{{< /codeWide >}}
+```
 
 ## Loop using Index
-{{< codeWide language="go" >}}
+```go
 package main
 
 import "fmt"
@@ -45,9 +45,9 @@ func main() {
 		fmt.Println("Run Number", i)
 	}
 }
-{{< /codeWide >}}
+```
 ## Loop using range
-{{< codeWide language="go" >}}
+```go
 package main
 
 import "fmt"
@@ -64,4 +64,4 @@ func main() {
 		fmt.Printf("The value of Key %s is %s\n", key, val)
 	}
 }
-{{< /codeWide >}}
+```

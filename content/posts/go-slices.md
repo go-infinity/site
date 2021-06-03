@@ -11,7 +11,7 @@ categories: [Golang]
 Slices are golang provided data structure to create dynamic sized collection of same type elements
 Slices are mutable.
 ## Slice Initialization
-{{< codeWide language="go" >}}
+```go
 Shorthand initialization
 s := []string{"TV","VCR","DVD"}
 
@@ -27,23 +27,23 @@ Slices is a pointer to and it points to an backing array.
 
 ## Inbuilt functions to support slice
 - append: to add data to an existing slice
-{{< codeWide language="go" >}}
+```go
 myslice := []string{"a","b","c","d","e"}
 myslice = append(myslice, "f","g")
 fmt.Println(len(myslice))
 ```
 - len: Provide length(number of elements it contain) of a slice 
-{{< codeWide language="go" >}}
+```go
 myslice := []string{"a","b","c","d","e"}
 fmt.Println(len(myslice))
 ```
 - cap: Provide capacity(number of elements in the underlying array, counting from the first element in the slice) of a slice
-{{< codeWide language="go" >}}
+```go
 myslice := []string{"a","b","c","d","e"}
 fmt.Println(cap(myslice))
 ```
 - make: Used to create slice
-{{< codeWide language="go" >}}
+```go
 myslice = make([]string,10) // Here 10 is the length
 myslice1 = make([]string,5,10)// Here 5 is length and 10 is capacity
 
@@ -51,42 +51,42 @@ myslice1 = make([]string,5,10)// Here 5 is length and 10 is capacity
 
 ## Slices Operations
 - Append/Push
-{{< codeWide language="go" >}}
+```go
 team := []string{"D", "S", "A", "V", "M"}
 team = append(team, "A")
 ```
 - Get
-{{< codeWide language="go" >}}
+```go
 team := []string{"D", "S", "A", "V", "M"}
 fmt.Printf("First member of the team is %s\n", team[0])
 ```
 - Set
-{{< codeWide language="go" >}}
+```go
 team := []string{"D", "S", "A", "V", "M"}
 team[2] = "Azazul"
 fmt.Printf("Third member of the team is %s\n", team[2])
 ```
 - Iterate
-{{< codeWide language="go" >}}
+```go
 team2 := []string{"X", "Y", "Z"}
 for i, val := range team2 {
     fmt.Printf("%d index has value:%s\n", i, val)
 }
-{{< /codeWide >}}
+```
 - Delete
-{{< codeWide language="go" >}}
+```go
 team1 := []string{"D", "S", "A", "V", "M"}
 team2 := append(team1[:2], team1[3:]...)
 ```
 - Insert
 - Pop
-{{< codeWide language="go" >}}
+```go
 team1 := []string{"D", "S", "A", "V", "M"}
 x, team := team1[len(team1)-1], team1[:len(team1)-1]
 ```
 
 - Slicing
-{{< codeWide language="go" >}}
+```go
 team1 := []string{"D", "S", "A", "V", "M"}
 // Slice[start:end)
 // To include all elements
@@ -97,7 +97,7 @@ team2 := team[:n]
 team2 := team[n:]
 ```
 - Extend
-{{< codeWide language="go" >}}
+```go
 team1 := []string{"D", "S", "A", "V", "M"}
 team2 := []string{"X", "Y", "Z"}
 team := append(team1, team2...)

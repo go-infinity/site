@@ -26,7 +26,7 @@ POSIX standard has 2 set of information related to file permissions
 - file/dir-permission for owner-permission for group-permission for others
 
 ## File Stats
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -43,9 +43,9 @@ func main() {
 	fmt.Println(f.Size()) // to get the file size in bytes
 	fmt.Println(f.Mode()) // to get the file permission mode
 }
-{{< /codeWide >}}
+```
 ## Create File
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -62,9 +62,9 @@ func main() {
 	}
 	fmt.Printf(f.Name())
 }
-{{< /codeWide >}}
+```
 ## Write File
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -87,10 +87,10 @@ func main() {
 	}
 	fmt.Printf("N:%d", n)
 }
-{{< /codeWide >}}
+```
 
 ## Read File in Chunks
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -117,12 +117,12 @@ func main() {
 		fmt.Print(string(b[:n]))
 	}
 }
-{{< /codeWide >}}
+```
 
 ## Read File using FileMode
 ## Read File using Stat
 ## Read File using ioutil
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -138,6 +138,6 @@ func main() {
 	fmt.Println(string(data))
 
 }
-{{< /codeWide >}}
+```
 ## Rename File
 ## Remove File 

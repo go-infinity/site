@@ -15,25 +15,25 @@ Conditional statements are features of a programming language, which help in per
 Go supports multiple branches in the conditional. These statements take the form if...else if...else.
 
 - If Condition
-{{< codeWide language="go" >}}
+```go
 num := 100
 if num > 10{
     fmt.Println("Number is greater then 10")
 }
-{{< /codeWide >}}
+```
 
 - If..else Condition
-{{< codeWide language="go" >}}
+```go
 num := 9
 if num > 10{
     fmt.Println("Number is greater then 10")
 }else{
     fmt.Println("Number is less then 10")
 }
-{{< /codeWide >}}
+```
 
 - if..else if...else Nested Condition
-{{< codeWide language="go" >}}
+```go
 if marks == 100 {
     fmt.Println("Perfect Score!")
 }else if marks >= 60 {
@@ -41,7 +41,7 @@ if marks == 100 {
 }else {
     fmt.Println("You fail!")
 }
-{{< /codeWide >}}
+```
 
 
 

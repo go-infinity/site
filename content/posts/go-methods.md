@@ -9,12 +9,12 @@ categories: [Golang]
 
 ## Whats are Methods
 Methods provide behaviour to our types. It provides Object Oriented Programming Model in Golang. They are similar to functions with one difference i.e, the method contains a receiver argument in it. Receiver argument help in accessing receiver properties. 
-{{< codeWide language="go" >}}
+```go
 //Syntax
 func(receiver_name Type) method_name(parameter_list)(return_type){
 // Code
 }
-{{< /codeWide >}}
+```
 
 ## Golang Specification
 ```ebnf
@@ -23,7 +23,7 @@ Receiver   = Parameters .
 ```
 ## Method Reciever Types
 - Value Receiver - Pass by Value
-{{< codeWide language="go" >}}
+```go
 package book
 
 //Book is an Entity/Business Object in Library Domain
@@ -37,15 +37,15 @@ type Book struct {
 func(b Book) Title() string {
 	return b.BookTitle
 }
-{{< /codeWide >}}
+```
 - Pointer Reciever - Pass By reference
-{{< codeWide language="go" >}}
+```go
 func(b *Book) UpdateTitle(newTitle string) bool {
 	b.BookTitle = newTitle
 	fmt.Println(b.BookTitle)
 	return true
 }
-{{< /codeWide >}}
+```
 ## Value to Pointer Receiver Conversion
 
 
@@ -53,7 +53,7 @@ func(b *Book) UpdateTitle(newTitle string) bool {
 
 ## Methods with same name
 We can have methods with same name but different receiver.
-{{< codeWide language="go" >}}
+```go
 //syntax
 func(reciver_name_1 Type) method_name(parameter_list)(return_type){
 // Code
@@ -62,4 +62,4 @@ func(reciver_name_1 Type) method_name(parameter_list)(return_type){
 func(reciver_name_2 Type) method_name(parameter_list)(return_type){
 // Code
 }
-{{< /codeWide >}}
+```

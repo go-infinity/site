@@ -7,7 +7,7 @@ toc: true
 categories: [go]
 ---
 ## Simple Marshal
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -31,10 +31,10 @@ func main() {
 	}
 	fmt.Println(string(jsonData))
 }
-{{< /codeWide >}}
+```
 
 ## Marshal Slice of Struct
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -66,7 +66,7 @@ func main() {
 ```
 
 ## Marshal to Different JSON key names
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -127,7 +127,7 @@ func main() {
 }
 
 ## Marshal JSON except zero value intiialized fields
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -160,7 +160,7 @@ func main() {
 
 ## Marshal JSON with default value for zero value intiialized fields
 
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -197,7 +197,7 @@ func main() {
 ```
 
 ## CustomJSON Marshaller
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (

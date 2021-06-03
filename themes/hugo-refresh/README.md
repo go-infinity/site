@@ -155,7 +155,7 @@ Usage example:
     $ dmesg | tail
     ......
     [13401.299114] overflow64[16566]: segfault at 616161616161 ip 0000616161616161 sp 00007fffffffddb0 error 14 in libc-2.27.so[7ffff79e4000+1e7000]
-{{< /codeWide >}}
+```
 ```
 
 This shortcode has 2 parameters:

@@ -9,7 +9,7 @@ categories: [go]
 
 ## Unmarsalling structured json data
 
-{{< codeWide language="go" >}}
+```go
 package main
 import (
 	"encoding/json"
@@ -33,9 +33,9 @@ func main() {
 	}
 	fmt.Printf("%+v", e)
 }
-{{< /codeWide >}}
+```
 ## Unmarshal structured JSON data with struct tags
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -61,10 +61,10 @@ func main() {
 	}
 	fmt.Printf("%+v", e)
 }
-{{< /codeWide >}}
+```
 
 ## Unmarshal structured nested JSON
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -104,10 +104,10 @@ func main() {
 	}
 	fmt.Printf("%+v", e)
 }
-{{< /codeWide >}}
+```
 
 ## Unmarshal structured List based JSON
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -144,4 +144,4 @@ func main() {
 	}
 	fmt.Printf("%+v", e[0]) // Print 1st object
 }
-{{< /codeWide >}}
+```

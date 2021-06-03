@@ -23,37 +23,37 @@ Result         = Parameters | Type .
 
 ## Function Example
 Named Return
-{{< codeWide language="go" >}}
+```go
 func ToUSD(amountINR float64) (amountUSD float64) {
     amountUSD = amountINR/70 
     return amountUSD
 }
-{{< /codeWide >}}
+```
 
 Return without name
-{{< codeWide language="go" >}}
+```go
 func ToUSD(amountINR float64) float64 {
     amountUSD := amountINR/70 
     return amountUSD
 }
-{{< /codeWide >}}
+```
 
 Multiple return values of same type
-{{< codeWide language="go" >}}
+```go
 func ToUSDAndPound(amountINR float64) (float64,float64) {
     return amountINR / 70, amountINR / 90
 }
-{{< /codeWide >}}
+```
 Multiple return values of different type
-{{< codeWide language="go" >}}
+```go
 func ToUSD(amountINR float64) (amountUSD float64,symbol string) {
     return amountINR / 70, "$"
 }
-{{< /codeWide >}}
+```
 Variadic Functions : 
 - The function that called with the varying number of arguments is known as variadic function. We can pass any number of same type arguments to the function.
 - Variadic function is used when we don’t know the quantity of parameters.
-{{< codeWide language="go" >}}
+```go
 func SumInt(ints ...int) int{
     sum : = 0
     for i,val := range ints{
@@ -61,14 +61,14 @@ func SumInt(ints ...int) int{
     }
     return sum
 }
-{{< /codeWide >}}
+```
 Init Functions :
 - An init() function doesn't take or return any arugument. 
 - This function is called when the package is initialized. 
 - We are allowed to create multiple init() function in the same program which will be exected in the Order of there creation. 
 - We can't refer init() function from anywhere. 
 - init() functions are execute before main() function
-{{< codeWide language="go" >}}
+```go
 var CompanyName string
 var ExchangeRate int
 
@@ -76,14 +76,14 @@ func init() {
 	CompanyName = "Go-Infinity"
 	ExchangeRate = 70
 }
-{{< /codeWide >}}
+```
 Anonymous Functions
 Function Type
 - An anonymous function is a function which doesn’t contain any name.
 - Anonymous function are used when we want to create inline function.
 - These are also know as function literal
 - We can assign an anonymous function to a variable. When you assign a function to a variable, then the type of the variable is of function type and you can call that variable like a function call as shown in the below example.
-{{< codeWide language="go" >}}
+```go
 var HelloFunc func(string) string
 HelloFunc = func(audience string) string {
     return "Hello " + audience

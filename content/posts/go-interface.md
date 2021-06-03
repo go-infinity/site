@@ -12,20 +12,20 @@ An interface is a collection of method definitions (without implementations) and
 
 ## Interface in Golang
 The interface is a custom type that is used to specify a set of one or more method signatures and the interface is abstract, so you are not allowed to create an instance of the interface.
-{{< codeWide language="go" >}}
+```go
 type interface_name interface{
 // Method signatures
 func Method1() return type
 func Method2() return type
 }
-{{< /codeWide >}}
+```
 
 ## Interface implementation
 - It is mandatory to implement all the methods of a interface for implementing an interface.
 - The Pre-define go language interfaces are implemented implicitly.
 
 ## Example
-{{< codeWide language="go" >}}
+```go
 package main
 import (
 	"fmt"
@@ -88,10 +88,10 @@ func main() {
 	fmt.Println("Area of square is ", sh.area())
 	fmt.Println("Perimeter of square is ", sh.perimeter())
 }
-{{< /codeWide >}}
+```
 
 ## Interface with Error Handling
-{{< codeWide language="go" >}}
+```go
 package main
 
 import (
@@ -184,4 +184,4 @@ func main() {
 		fmt.Println("Perimeter of square is ", perimeterOfSquare)
 	}
 }
-{{< /codeWide >}}
+```

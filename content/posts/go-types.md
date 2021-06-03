@@ -15,7 +15,7 @@ Types are of 2 type :
 
 ## In-built
 
-{{< codeWide language="go" >}}
+```go
 var abc = "abc"
 var number = 123
 ```
